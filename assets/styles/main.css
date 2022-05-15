@@ -1,6 +1,7 @@
 html,body, #__nuxt, #__layout{
     height:100%!important;
     width: 100%!important;
+    background-color: bisque;
 }
 
 .text-indent {

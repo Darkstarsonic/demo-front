@@ -4,7 +4,7 @@
     <div class="d-flex flex-column justify-content-center align-items-center">
       <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="d-flex flex-column" style="gap: 1rem">
 
-        <b-form-group v-if="subjects && subjects.length>0" id="input-group-1" label="subject:" label-for="input-1">
+        <b-form-group v-if="subjects && subjects.length>0" id="input-group-1" label="Предмет:" label-for="input-1">
           <b-form-select
               id="input-1"
               v-model="form.subject"
@@ -19,7 +19,7 @@
           </b-form-select>
         </b-form-group>
 
-        <b-form-group v-if="times && times.length>0" id="input-group-2" label="atTime:" label-for="input-2">
+        <b-form-group v-if="times && times.length>0" id="input-group-2" label="Время:" label-for="input-2">
           <b-form-select
               id="input-2"
               v-model="form.times"
@@ -32,7 +32,7 @@
           </b-form-select>
         </b-form-group>
 
-        <b-form-group v-if="teachers && teachers.length>0" id="input-group-3" label="teacher:" label-for="input-3">
+        <b-form-group v-if="teachers && teachers.length>0" id="input-group-3" label="Учитель:" label-for="input-3">
           <b-form-select
               id="input-3"
               v-model="form.teachers"

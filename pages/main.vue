@@ -35,7 +35,6 @@ export default {
 </script>
 <style>
 .main-body {
-  background-color: bisque;
   background-image: url("./static/img/kindpng_2461153.png");
   background-repeat: no-repeat;
   background-position: right bottom;

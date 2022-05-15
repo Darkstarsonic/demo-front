@@ -1,8 +1,6 @@
 <template>
   <div>
     <nav-bar/>
-  </div>
-  <div>
     <b-table striped hover :items="schedule" :fields="fields"></b-table>
   </div>
 </template>
@@ -14,11 +12,19 @@ export default {
     NavBar
   }, data() {
     return {
-      fields: [],
+      table: {
+        schedule: null
+      },
+      fields: [
+        'Предмет',
+        'Учитель',
+        'Время'
+      ],
       schedule: []
     }
   },
   mounted() {
+    this.getLesson()
   },
   methods: {
     getLesson() {
@@ -26,6 +32,15 @@ export default {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('jwt')}`
       }
+      let user = JSON.parse(localStorage.getItem('user'))
+      this.$axios.get(`/lesson/schedule/${user.id}`, {
+        headers: headers
+      }).then(response => {
+        if (response.status === 200) {
+          this.schedule = response.data
+        }
+        console.log(response.data)
+      })
     }
   }
 }
