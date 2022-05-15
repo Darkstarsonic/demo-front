@@ -1,5 +1,4 @@
 <template>
-
   <div class="d-flex justify-content-center flex-column align-items-center">
     <div class="w-50">
       <div class="d-flex justify-content-center">
@@ -71,7 +70,7 @@ export default {
         email: this.email,
         password: this.password,
         fullName: this.fullName,
-        instrument: this.instrument,
+        instrument: this.form.instrument,
         role: this.role
       }).then(response => console.log(response.data))
       this.$router.push('/')

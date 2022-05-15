@@ -12,13 +12,13 @@ export default {
     NavBar
   }, data() {
     return {
-      table: {
+      table:{
         schedule: null
       },
       fields: [
-        'Предмет',
-        'Учитель',
-        'Время'
+        {key:'subject', label: 'Предмет'},
+        {key:'teacher', label:'Учитель'},
+        {key:'timeSlot',label:'Время'}
       ],
       schedule: []
     }
